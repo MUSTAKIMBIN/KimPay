@@ -4,8 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KimPay</title>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- tailwind css  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col items-center justify-center"
+  >
+    <div
+      class="h-[123px] w-[220px] bg-[url(./assets/bg.png)] bg-cover flex items-center justify-center"
+    >
+      <img src="./assets/Group.png" alt="logo" />
+    </div>
+    <form class="bg-white rounded-3xl p-6">
+      <div>
+        <label class="font-semibold" for="">Mobile Number</label>
+        <br />
+        <input
+          type="text"
+          placeholder="Enter Your number"
+          class="my-2 input bg-[#F4F5F7] rounded-3xl"
+        />
+      </div>
+      <div class="my-4">
+        <label class="font-semibold" for="">4 Digit Pin</label>
+        <br />
+        <input
+          type="text"
+          placeholder="Enter 4 digit pin"
+          class="my-2 input bg-[#F4F5F7] rounded-3xl"
+        />
+      </div>
+      <button class="btn btn-primary w-full rounded-3xl">Primary</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>
