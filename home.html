@@ -4,8 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePage</title>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h3>Home page</h3>
+  <body class="bg-[#F4F5F7] h-[100vh]">
+    <div class="flex justify-between items-center border-b-2 border-red-950">
+      <div class="flex items-center">
+        <div>
+          <img src="./assets/Group.png" alt="logo" />
+        </div>
+        <div>
+          <p class="text-md font-semibold">
+            $ <span id="total-balance">45000</span>
+          </p>
+          <p class="text-sm">Available Balance</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary">LogIn</button>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-3xl font-bold">Welcome to Payooo!</h3>
+      <p>
+        Enjoy easy and convenient financial services with us. Cashout charge is
+        low and
+      </p>
+    </div>
+    <div class="grid grid-cols-3">
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">add Money</p>
+      </div>
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">CashOut</p>
+      </div>
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">Trasfar Money</p>
+      </div>
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">Get Bonus</p>
+      </div>
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">Pay Bill</p>
+      </div>
+      <div class="border rounded-lg my-5 mx-5">
+        <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
+        <p class="text-center">Transactions</p>
+      </div>
+    </div>
+
+    <!-- add money form -->
+    <form class="bg-white rounded-3xl p-6">
+      <h1>Add Money</h1>
+      <div>
+        <select class="select">
+          <option disabled selected>Select Bank</option>
+          <option>Usb</option>
+          <option>Gramin</option>
+          <option>Islami Bank</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-semibold" for="">Bank Account Number</label>
+        <br />
+        <input
+          type="text"
+          id="bank-account-number"
+          placeholder="Enter Your Bank Account"
+          class="my-2 input bg-[#F4F5F7] rounded-3xl"
+        />
+      </div>
+      <div class="my-4">
+        <label class="font-semibold" for="">Amount to add </label>
+        <br />
+        <input
+          id="amountToAdd"
+          type="number"
+          placeholder="Amount to add money"
+          class="my-2 input bg-[#F4F5F7] rounded-3xl"
+        />
+      </div>
+      <div class="my-4">
+        <label class="font-semibold" for="">4 Digit Pin</label>
+        <br />
+        <input
+          id="pin-number-bank"
+          type="number"
+          placeholder="Enter 4 digit pin"
+          class="my-2 input bg-[#F4F5F7] rounded-3xl"
+        />
+      </div>
+      <button id="addMoney" class="btn btn-primary w-full rounded-3xl">
+        Add Money
+      </button>
+    </form>
+    <script src="home.js"></script>
   </body>
 </html>
