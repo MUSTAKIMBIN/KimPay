@@ -38,11 +38,11 @@
       </p>
     </div>
     <div class="grid grid-cols-3">
-      <div class="border rounded-lg my-5 mx-5">
+      <div class="border rounded-lg my-5 mx-5" id="add-money-div">
         <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
         <p class="text-center">add Money</p>
       </div>
-      <div class="border rounded-lg my-5 mx-5">
+      <div class="border rounded-lg my-5 mx-5" id="cashOut-div">
         <img class="mx-auto" src="./assets/wallet1.png" alt="wallet1" />
         <p class="text-center">CashOut</p>
       </div>
@@ -63,52 +63,95 @@
         <p class="text-center">Transactions</p>
       </div>
     </div>
-
-    <!-- add money form -->
-    <form class="bg-white rounded-3xl p-6">
-      <h1>Add Money</h1>
-      <div>
-        <select class="select">
-          <option disabled selected>Select Bank</option>
-          <option>Usb</option>
-          <option>Gramin</option>
-          <option>Islami Bank</option>
-        </select>
+    <!-- all froms section -->
+    <div>
+      <!-- add money form -->
+      <div id="add-money-form">
+        <h1 class="text-xl">Add Money</h1>
+        <form class="bg-white rounded-3xl p-6">
+          <div>
+            <select class="select">
+              <option disabled selected>Select Bank</option>
+              <option>Usb</option>
+              <option>Gramin</option>
+              <option>Islami Bank</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-semibold" for="">Bank Account Number</label>
+            <br />
+            <input
+              type="text"
+              id="bank-account-number"
+              placeholder="Enter Your Bank Account"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <div class="my-4">
+            <label class="font-semibold" for="">Amount to add </label>
+            <br />
+            <input
+              id="amountToAdd"
+              type="number"
+              placeholder="Amount to add money"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <div class="my-4">
+            <label class="font-semibold" for="">4 Digit Pin</label>
+            <br />
+            <input
+              id="pin-number-bank"
+              type="number"
+              placeholder="Enter 4 digit pin"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <button id="addMoney" class="btn btn-primary w-full rounded-3xl">
+            Add Money
+          </button>
+        </form>
       </div>
-      <div>
-        <label class="font-semibold" for="">Bank Account Number</label>
-        <br />
-        <input
-          type="text"
-          id="bank-account-number"
-          placeholder="Enter Your Bank Account"
-          class="my-2 input bg-[#F4F5F7] rounded-3xl"
-        />
+      <!-- cashOUt form -->
+      <div id="cashOut-from" class="hidden">
+        <h1 class="text-xl">Cash out</h1>
+        <form class="bg-white rounded-3xl p-6">
+          <div>
+            <label class="font-semibold" for="">Agent Number</label>
+            <br />
+            <input
+              type="text"
+              id="Agent Number"
+              placeholder="Enter Your Bank Account"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <div class="my-4">
+            <label class="font-semibold" for="">Amount to out </label>
+            <br />
+            <input
+              id="cashOutAmount"
+              type="number"
+              placeholder="Amount to out"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <div class="my-4">
+            <label class="font-semibold" for="">4 Digit Pin</label>
+            <br />
+            <input
+              id="pin-number-bank"
+              type="number"
+              placeholder="Enter 4 digit pin"
+              class="my-2 input bg-[#F4F5F7] rounded-3xl"
+            />
+          </div>
+          <button id="cashOut" class="btn btn-primary w-full rounded-3xl">
+            Cash Out
+          </button>
+        </form>
       </div>
-      <div class="my-4">
-        <label class="font-semibold" for="">Amount to add </label>
-        <br />
-        <input
-          id="amountToAdd"
-          type="number"
-          placeholder="Amount to add money"
-          class="my-2 input bg-[#F4F5F7] rounded-3xl"
-        />
-      </div>
-      <div class="my-4">
-        <label class="font-semibold" for="">4 Digit Pin</label>
-        <br />
-        <input
-          id="pin-number-bank"
-          type="number"
-          placeholder="Enter 4 digit pin"
-          class="my-2 input bg-[#F4F5F7] rounded-3xl"
-        />
-      </div>
-      <button id="addMoney" class="btn btn-primary w-full rounded-3xl">
-        Add Money
-      </button>
-    </form>
+    </div>
     <script src="home.js"></script>
   </body>
 </html>
